@@ -220,6 +220,7 @@ else ifneq (,$(findstring armv,$(platform)))
 # emscripten
 else ifeq ($(platform), emscripten)
 	TARGET := $(TARGET_NAME)_libretro_emscripten.bc
+	EXTRA_INCLUDES := -Iutils/zlib
 
 # Windows
 else
